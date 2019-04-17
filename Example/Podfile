@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'OptionPhotos_Example' do
+  pod 'OptionPhotos', :path => '../'
+
+  target 'OptionPhotos_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
