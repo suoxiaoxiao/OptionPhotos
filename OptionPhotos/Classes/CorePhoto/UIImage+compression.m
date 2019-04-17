@@ -7,7 +7,7 @@
 //
 
 #import "UIImage+compression.h"
-#import "MemoryMonitoring.h"
+//#import "MemoryMonitoring.h"
 
 @implementation UIImage (compression)
 

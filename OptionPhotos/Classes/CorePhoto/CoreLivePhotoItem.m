@@ -8,7 +8,7 @@
 
 #import "CoreLivePhotoItem.h"
 #import "PHAssetCollection+Thumb.h"
-#import "MemoryMonitoring.h"
+//#import "MemoryMonitoring.h"
 
 @interface CoreLivePhotoItem ()
 
@@ -22,7 +22,7 @@
 {
     self = [super init];
     if (self) {
-        NSLog(@"%s 前 使用内存:%f",__func__,[MemoryMonitoring getDeviceUseMemory]);
+//        NSLog(@"%s 前 使用内存:%f",__func__,[MemoryMonitoring getDeviceUseMemory]);
         
         self.asset = asset;
         
@@ -62,7 +62,7 @@
                                                     }];
             
         }
-        NSLog(@"%s 后 使用内存:%f",__func__,[MemoryMonitoring getDeviceUseMemory]);
+//        NSLog(@"%s 后 使用内存:%f",__func__,[MemoryMonitoring getDeviceUseMemory]);
     }
     return self;
 }

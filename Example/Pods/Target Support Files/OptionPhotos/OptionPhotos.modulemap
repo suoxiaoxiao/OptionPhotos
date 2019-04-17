@@ -1,0 +1,6 @@
+framework module OptionPhotos {
+  umbrella header "OptionPhotos-umbrella.h"
+
+  export *
+  module * { export * }
+}

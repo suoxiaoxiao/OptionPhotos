@@ -10,7 +10,7 @@
 #import "CorePhotoMemoryCache.h"
 #import <Photos/Photos.h>
 #import "PHAssetCollection+Thumb.h"
-#import "MemoryMonitoring.h"
+//#import "MemoryMonitoring.h"
 
 static const NSInteger datumUnit = 512;
 
@@ -240,7 +240,7 @@ static const NSInteger datumUnit = 512;
 - (void)gainPhotosFromAlbum:(CoreAlbumItem *)album complate:(DownloadSystemImageComplateBlock)complateBlock
 {
     NSLog(@"%s 调用开始时间: %@",__func__,[NSDate date]);
-    NSLog(@"%f gainPhotosFromAlbum 使用内存",[MemoryMonitoring getDeviceUseMemory]);
+//    NSLog(@"%f gainPhotosFromAlbum 使用内存",[MemoryMonitoring getDeviceUseMemory]);
     //这里需要做一个内存优化的判断
     if ([SXCorePhotoConfig sharedInstance].isNeedPhototLive) {// 因为PhotoLive比较占用内存, 所以这里的线程数尽量放小
         self.readQueue.maxConcurrentOperationCount = 3;
@@ -453,7 +453,7 @@ static const NSInteger datumUnit = 512;
             if ([SXCorePhotoConfig sharedInstance].isNeedCache) {
                 [[CorePhotoMemoryCache defaultCache] addAssetsCacheFor:images ofCollection:album];
             }
-            NSLog(@"%f gainPhotosFromAlbum 后 使用内存",[MemoryMonitoring getDeviceUseMemory]);
+//            NSLog(@"%f gainPhotosFromAlbum 后 使用内存",[MemoryMonitoring getDeviceUseMemory]);
             NSLog(@"%s 调用结束时间: %@",__func__,[NSDate date]);
             if (complateBlock) {
                 complateBlock(images,nil);

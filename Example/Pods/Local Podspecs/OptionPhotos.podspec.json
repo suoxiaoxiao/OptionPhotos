@@ -1,0 +1,22 @@
+{
+  "name": "OptionPhotos",
+  "version": "1.0.3",
+  "summary": "A short description of OptionPhotos.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/suoxiaoxiao/OptionPhotos",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "suoxiaoxiao": "suoxiaoxiao"
+  },
+  "source": {
+    "git": "https://github.com/suoxiaoxiao/OptionPhotos.git",
+    "tag": "1.0.3"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "OptionPhotos/Classes/**/*"
+}
